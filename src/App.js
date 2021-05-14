@@ -1,28 +1,10 @@
-import Books from './components/books/books';
+import Home from './pages/home';
 import './App.css';
+
 function App() {
   return (
     <div className='App'>
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
-      <Books />
+      <Home />
     </div>
   );
 }

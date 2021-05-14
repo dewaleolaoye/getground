@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Books = () => {
+const Books = ({ author, title, year, country, city, pages }) => {
   return (
     <div className='book'>
-      <p className='book__author'>Author: Ανώνυμος</p>
-      <p className='book__title'>Title: Ο Αλέξανδρος ο Μακεδών</p>
-      <p className='book__pyear'>Year: 1529</p>
-      <p className='book__pcountry'>Country: Ιταλία</p>
-      <p className='book__pcity'>City: Βενετία</p>
-      <p className='book__pages'>Pages: 104</p>
+      <p className='book__author'>{author.map((authorName) => authorName)}</p>
+      <p className='book__title'>{title}</p>
+      <p className='book__pyear'>{year}</p>
+      <p className='book__pcountry'>{country}</p>
+      <p className='book__pcity'>{city}</p>
+      <p className='book__pages'>{pages}</p>
     </div>
   );
 };
