@@ -1,5 +1,8 @@
+.App {
+  margin: 4rem auto;
+}
+
 .App .home {
-  margin: 2rem auto;
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -14,4 +17,10 @@
   color: #fff;
   padding: 1rem 2rem;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.App ul.MuiPagination-ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 }

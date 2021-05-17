@@ -28,13 +28,16 @@ const { booksRequested, booksReceived, booksRequestFail } = bookSlice.actions;
 
 const url = '/books';
 
-export const loadBooks = () => (dispatch, getState) => {
+export const loadBooks = (page, itmesPerPage) => (dispatch, getState) => {
+  console.log(page, itmesPerPage, 'result ');
   const data = getState().data;
 
   dispatch(
     apiCallBegan({
       url,
       data,
+      page,
+      itmesPerPage,
       method: 'post',
       onStart: booksRequested.type,
       onSuccess: booksReceived.type,

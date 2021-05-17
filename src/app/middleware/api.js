@@ -9,7 +9,18 @@ const api =
   async (action) => {
     if (action.type !== apiCallBegan.type) return next(action);
 
-    const { url, method, data, onSuccess, onError, onStart } = action.payload;
+    const {
+      url,
+      method,
+      data,
+      onSuccess,
+      onError,
+      onStart,
+      itemsPerPage,
+      page,
+    } = action.payload;
+
+    console.log(action.payload, 'payload');
 
     if (onStart) dispatch({ type: onStart });
 
@@ -21,6 +32,10 @@ const api =
         url,
         method,
         data,
+        params: {
+          itemsPerPage,
+          page,
+        },
       });
 
       dispatch(apiCallSuccess(response.data));

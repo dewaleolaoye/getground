@@ -1,14 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
 import store from './app/store';
 import { loadBooks } from './app/reducer/bookSlice';
 
-const h = store.dispatch(loadBooks());
-console.log(h, 'h');
+store.dispatch(loadBooks());
 
 ReactDOM.render(
   <Provider store={store}>
