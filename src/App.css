@@ -1,38 +1,49 @@
 .App {
-  text-align: center;
+  margin: 4rem auto;
+  padding: 0 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .home {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.App .book {
+  max-width: 290px;
+  width: 100%;
+  background-color: #3b4f6f;
+  border-radius: 16px;
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App ul.MuiPagination-ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.App .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.App .input label {
+  margin-right: 0.75rem;
+}
+
+.App .input input {
+  background: none;
+  background-color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  border: none;
+  border-radius: 6px;
 }
