@@ -3,6 +3,9 @@ import { useSelector } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Books from '../components/books/books';
 import PaginationLink from '../components/pagination/pagination';
+import SearchField from '../components/searchField/searchField';
+// import { Provider } from 'react-redux';
+// import store from '../app/store';
 
 const Home = () => {
   const booksData = useSelector((state) => state.reducer);
@@ -11,6 +14,7 @@ const Home = () => {
 
   return (
     <>
+      <SearchField />
       <div className='home'>
         {loadingState && <CircularProgress color='primary' />}
         {!loadingState &&
